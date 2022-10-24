@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="./css/mystyle.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+      body{
+        margin: auto;
+        max-width: 980px;
+      }
       section{
         display: flex;
       }
@@ -34,14 +38,14 @@
   <!--  header+nav+section>article*3+aside^footer -->
   <header id="home"> 
     <i class="fa-sharp fa-solid fa-bars"></i>
-     <h1> SeongWon Site</h1>
+    <a href="./index.html"> <h1> SeongWon Site</h1></a>
   </header>
   <nav>
      <!--ul>li*4>a{메인메뉴$$}--> 
      <ul>
       <li><a href="#">소개</a></li>
-      <li><a href="#">쇼핑</a></li>
-      <li><a href="#">패키지</a></li>
+      <li><a href="./shop/computer.html">쇼핑</a></li>
+      <li><a href="./event/event.html">이벤트</a></li>
       <li><a href="#">커뮤니티</a></li>
      </ul>
 
@@ -115,7 +119,9 @@
       </div>
     </aside>
   </section>
-  <footer> 저작권과 주소
+  <footer> 
+    <p class="w3-left-align">Copyright 2022. SeongWon All rights reserved</p>
+    <h5>Contact </h5>
     <div class="sns">
       <a href="http://web.donga.ac.kr/sense64">
       <i class="fa-brands fa-facebook"></i></a>

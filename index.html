@@ -43,6 +43,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         flex:1;
       }
     </style>
+    <script>
+      function validateForm() {
+      let x = document.forms["userForm"]["id"].value;
+      let y = document.forms["userForm"]["pw"].value;
+      if (x == "") {
+        alert("회원id를 입력");
+        userForm.id.focus();
+        return false;
+      }  
+      else if(y==""){
+        alert("비밀번호 입력");
+        userForm.pw.focus();
+        return false;
+      } else {
+        dataLayer.push({
+          'event' : 'userform',
+          'formName' : '회원가입'
+        })
+        alert("회원가입이 완료되었습니다.")
+      }
+  }
+  </script>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -121,7 +143,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="login">
         <h2>  로그인</h2>
-        <form action="thanks.html" method="get">
+        <form action="thanks.html" method="get" onsubmit="return validateForm();>
           회원ID<input type="text" class="w3-input" name="id" id=""> <br>
           비밀번호 <input type="password" class="w3-input" name="pw" id=""><br>
           남자 <input type="radio" name="gender" value="1" id="">
